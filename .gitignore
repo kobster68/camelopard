@@ -1,0 +1,82 @@
+### Forge/Gradle ###
+.gradle/
+gradle-3.5.1/
+build/
+classes/
+gradle-app.setting
+out/
+run/
+
+### Eclipse IDE ###
+*.bak
+*.launch
+*.pydevproject
+*.swp
+*.tmp
+*~.nib
+.classpath
+.loadpath
+.metadata
+.project
+.settings/
+bin/
+eclipse/
+local.properties
+tmp/
+
+### IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+
+### VSCode ###
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+### Java ###
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# External tool builders
+.externalToolBuilders/
+
+
+### MacOS ###
+# .DS_Store (Desktop Services Store) Files
+*.DS_Store
+.DS_Store
+
+### Windows ###
+# Thumbnail Database
+[Tt]humbs.db
+[Tt]humbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dumps
+*.stackdump
+
+# Folder Configs
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
