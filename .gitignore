@@ -19,6 +19,13 @@ usernamecache.json
 
 server.properties
 eula.txt
+ops.json
+crash-reports/
+usercache.json
+whitelist.json
+world/
+banned-ips.json
+banned-players.json
 
 ### Eclipse IDE ###
 *.bak
