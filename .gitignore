@@ -9,8 +9,8 @@ run/
 
 ## Minecraft Runtime ##
 
-/logs
-/config
+logs/
+config/
 options.txt
 saves/
 usernamecache.json
