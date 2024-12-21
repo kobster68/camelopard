@@ -41,7 +41,7 @@ public class Camelopard
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-    	
+    	proxy.registerEvents();
     }
     
     @EventHandler
