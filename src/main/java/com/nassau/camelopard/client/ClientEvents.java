@@ -15,14 +15,9 @@ public class ClientEvents {
 		if (event.entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.entity;
 
-			GL11.glScalef(1f, 1f, 1f);
+			GL11.glScalef(0.5f, 0.5f, 0.5f);
 
 			// event.setCanceled(true);
 		}
-	}
-
-	@SubscribeEvent
-	public void onRenderTick(TickEvent.RenderTickEvent event) {
-		Minecraft.getMinecraft().thePlayer.eyeHeight = 1.0f;
 	}
 }
