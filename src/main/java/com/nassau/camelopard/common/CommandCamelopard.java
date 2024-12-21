@@ -50,8 +50,13 @@ public class CommandCamelopard implements ICommand {
 		
 		EntityPlayer player = sender.getEntityWorld().getPlayerEntityByName(sender.getCommandSenderName());
 		
+		ExtendedPlayer ex = ExtendedPlayer.get(player);
+		
 		if(args[0].equals("get")) {
-			sender.addChatMessage(new ChatComponentText("Kamui level: " + ExtendedPlayer.get(player).getKamuiLevel()));
+			sender.addChatMessage(new ChatComponentText("Kamui level: " + ex.getKamuiLevel()));
+			
+			ex.sync(player);
+			
 			return;
 		}
 		if(args[0].equals("set")) {
@@ -69,9 +74,11 @@ public class CommandCamelopard implements ICommand {
 				return;
 			}
 	
-			ExtendedPlayer.get(player).setKamuiLevel(level);
+			ex.setKamuiLevel(level);
 			
-			sender.addChatMessage(new ChatComponentText("Changed Kamui level to " + ExtendedPlayer.get(player).getKamuiLevel()));
+			sender.addChatMessage(new ChatComponentText("Changed Kamui level to " + ex.getKamuiLevel()));
+			
+			ex.sync(player);
 			
 			return;
 		}

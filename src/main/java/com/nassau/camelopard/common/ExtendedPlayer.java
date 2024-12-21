@@ -1,7 +1,11 @@
 package com.nassau.camelopard.common;
 
+import com.nassau.camelopard.Camelopard;
+import com.nassau.camelopard.network.PacketExtendedPlayerSync;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -49,6 +53,12 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 
 	public int getKamuiLevel() {
 		return kamuiLevel;
+	}
+	
+	public void sync(EntityPlayer player) {
+		ExtendedPlayer ex = ExtendedPlayer.get(player);
+		PacketExtendedPlayerSync packet = new PacketExtendedPlayerSync(ex);
+		Camelopard.CHANNEL.sendTo(packet, (EntityPlayerMP) player);
 	}
 
 }

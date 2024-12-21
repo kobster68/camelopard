@@ -2,6 +2,7 @@ package com.nassau.camelopard;
 
 import com.nassau.camelopard.common.CommandCamelopard;
 import com.nassau.camelopard.common.CommonProxy;
+import com.nassau.camelopard.network.PacketExtendedPlayerSync;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -11,6 +12,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.command.ICommand;
 
 @Mod(modid = Camelopard.MODID, name = Camelopard.NAME, version = Camelopard.VERSION)
@@ -26,6 +30,8 @@ public class Camelopard
     @Instance("camelopard")
     public static Camelopard instance;
     
+    public static final SimpleNetworkWrapper CHANNEL = NetworkRegistry.INSTANCE.newSimpleChannel("camelopard");
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
@@ -35,7 +41,8 @@ public class Camelopard
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
+    	CHANNEL.registerMessage(PacketExtendedPlayerSync.Handler.class, PacketExtendedPlayerSync.class, 0, Side.SERVER);
+    	CHANNEL.registerMessage(PacketExtendedPlayerSync.Handler.class, PacketExtendedPlayerSync.class, 1, Side.CLIENT);
     }
     
     @EventHandler
