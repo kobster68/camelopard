@@ -32,7 +32,7 @@ public class Camelopard
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	
+
     }
     
     @EventHandler
