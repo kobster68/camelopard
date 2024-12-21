@@ -7,6 +7,14 @@ gradle-app.setting
 out/
 run/
 
+## Minecraft Runtime ##
+
+/logs
+/config
+options.txt
+saves/
+usernamecache.json
+
 ### Eclipse IDE ###
 *.bak
 *.launch
