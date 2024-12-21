@@ -15,6 +15,11 @@ options.txt
 saves/
 usernamecache.json
 
+## Server Runtime ##
+
+server.properties
+eula.txt
+
 ### Eclipse IDE ###
 *.bak
 *.launch
