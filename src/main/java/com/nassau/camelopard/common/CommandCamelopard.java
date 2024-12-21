@@ -72,6 +72,7 @@ public class CommandCamelopard implements ICommand {
 			ExtendedPlayer.get(player).setKamuiLevel(level);
 			
 			sender.addChatMessage(new ChatComponentText("Changed Kamui level to " + ExtendedPlayer.get(player).getKamuiLevel()));
+			
 			return;
 		}
 		

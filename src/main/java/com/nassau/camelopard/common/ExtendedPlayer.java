@@ -43,10 +43,6 @@ public class ExtendedPlayer implements IExtendedEntityProperties {
 	@Override
 	public void init(Entity entity, World world) {}
 	
-	public void sync() {
-		// TODO packets.
-	}
-	
 	public void setKamuiLevel(int kamuiLevel) {
 		this.kamuiLevel = kamuiLevel;
 	}
