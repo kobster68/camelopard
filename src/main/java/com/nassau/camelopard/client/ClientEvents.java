@@ -1,23 +1,38 @@
 package com.nassau.camelopard.client;
 
-import org.lwjgl.opengl.GL11;
+import com.nassau.camelopard.common.ExtendedPlayer;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import net.minecraft.client.Minecraft;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.RenderLivingEvent;
 
+@SideOnly(Side.CLIENT)
 public class ClientEvents {
 
 	@SubscribeEvent
 	public void onPlayerPreRender(RenderLivingEvent.Pre event) {
 		if (event.entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.entity;
-
-			GL11.glScalef(0.5f, 0.5f, 0.5f);
-
-			// event.setCanceled(true);
+			ExtendedPlayer ex = ExtendedPlayer.get(player);
+			
+			System.out.println(ex.getKamuiLevel());
+			
+			if(ex.getKamuiLevel() > 0) {
+				Tessellator tessellator = Tessellator.instance;
+				
+				tessellator.startDrawingQuads();
+				
+		        double halfSize = 1;
+		        tessellator.addVertex(-halfSize, -halfSize, -halfSize);
+		        tessellator.addVertex( halfSize, -halfSize, -halfSize);
+		        tessellator.addVertex( halfSize,  halfSize, -halfSize);
+		        tessellator.addVertex(-halfSize,  halfSize, -halfSize);
+		        
+		        tessellator.draw();
+			}
 		}
 	}
 }
