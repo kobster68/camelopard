@@ -7,12 +7,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Camelopard.MODID, name = Camelopard.NAME, version = Camelopard.VERSION)
+@Mod(modid = Camelopard.MODID, name = Camelopard.NAME)
 public class Camelopard
 {
     public static final String MODID = "camelopard";
     public static final String NAME = "Camelopard";
-    public static final String VERSION = "0.1.0";
 
     private static Logger logger;
 
