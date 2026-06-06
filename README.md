@@ -26,4 +26,4 @@ The jar will be built at:
 
 ## License
 
-See `LICENSE.txt`.
+This project is licensed under the MIT License. See `LICENSE.txt`.
