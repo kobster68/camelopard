@@ -6,20 +6,17 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Camelopard.MODID, name = Camelopard.NAME)
-public class Camelopard
-{
-    public static final String MODID = "camelopard";
-    public static final String NAME = "Camelopard";
+public class Camelopard {
+	public static final String MODID = "camelopard";
+	public static final String NAME = "Camelopard";
 
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
 
-    }
+	}
 
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
 
-    }
+	}
 }
