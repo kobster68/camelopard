@@ -17,6 +17,7 @@ public class ClientRegistry {
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent event) {
 		registerItemModel(ItemsCamelopard.MIXED_SEEDS);
+		registerItemModel(ItemsCamelopard.IRON_SCISSORS);
 	}
 	
 	private static void registerItemModel(Item item) {
